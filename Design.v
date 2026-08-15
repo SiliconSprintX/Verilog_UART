@@ -16,25 +16,24 @@ module uart (
 
     parameter CLKS_PER_BIT = 10;
 
-    // -------------------------
+
     // TX registers
-    // -------------------------
+
     reg [3:0] tx_bit_count;
     reg [7:0] tx_clk_count;
     reg [9:0] tx_shift_reg;
 
-    // -------------------------
     // RX registers
-    // -------------------------
+    
     reg [3:0] rx_bit_count;
     reg [7:0] rx_clk_count;
     reg [7:0] rx_shift_reg;
     reg       rx_busy;
 
 
-    // =================================================
+    
     // TRANSMITTER
-    // =================================================
+
 
     always @(posedge clk or posedge rst) begin
 
@@ -103,9 +102,9 @@ module uart (
     end
 
 
-    // =================================================
+    
     // RECEIVER
-    // =================================================
+    
 
     always @(posedge clk or posedge rst) begin
 
